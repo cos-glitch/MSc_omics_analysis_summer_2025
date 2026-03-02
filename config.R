@@ -1,0 +1,13 @@
+NXF_VER=24.04.4 nextflow run nf-core/sarek -r 3.4.2 \
+-profile docker \
+--input /samplesheet.csv \
+--outdir /results \
+--genome GATK.GRCh38 \
+--wes \
+--save_mapped \
+--save_output_as_bam \
+--multiqc_title tutorial_example2 \
+--trim_fastq  \
+--tools mutect2,manta,vep \
+-bg  \
+-resume
